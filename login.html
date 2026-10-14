@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Skill Swap Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">Skill Swap Platform</a>
+    <nav>
+      <a class="nav-btn secondary" href="login.html">Login</a>
+      <a class="nav-btn primary" href="signup.html">Sign Up</a>
+    </nav>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-heading">
+      <h1>Welcome Back</h1>
+      <p>Sign in to your Skill Swap account</p>
+    </div>
+
+    <form id="loginForm" class="auth-card">
+      <label>Email Address</label>
+      <input id="loginEmail" type="email" placeholder="Enter your email" required>
+
+      <label>Password</label>
+      <div class="password-wrap">
+        <input id="loginPassword" type="password" placeholder="Enter your password" required>
+        <button type="button" class="eye-btn" onclick="togglePassword('loginPassword')">👁</button>
+      </div>
+
+      <button class="full-btn primary" type="submit">Sign in</button>
+
+      <div class="divider"><span>Or try demo accounts</span></div>
+
+      <div class="demo-row">
+        <button type="button" class="demo-btn" onclick="demoLogin('user')">Demo User</button>
+        <button type="button" class="demo-btn" onclick="demoLogin('admin')">Demo Admin</button>
+      </div>
+
+      <p class="auth-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+      <p class="auth-link"><a href="#" onclick="forgotPassword(event)">Forgot your password?</a></p>
+      <p class="auth-link"><a href="index.html">← Back to Home</a></p>
+      <p id="loginMessage" class="message"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

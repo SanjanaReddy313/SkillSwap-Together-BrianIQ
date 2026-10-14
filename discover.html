@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Skills - Skill Swap Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">Skill Swap Platform</a>
+    <nav id="topNav">
+      <a class="nav-btn secondary" href="login.html">Login</a>
+      <a class="nav-btn primary" href="signup.html">Sign Up</a>
+    </nav>
+  </header>
+
+  <main class="discover-page">
+    <section class="discover-head">
+      <h1>Discover Amazing <span>Skills</span></h1>
+      <p>Connect with talented individuals and exchange skills that matter to you.</p>
+    </section>
+
+    <section class="search-panel">
+      <input id="searchInput" type="search" placeholder="🔍  Search skills or names..." oninput="renderUsers()">
+      <select id="availability" onchange="renderUsers()">
+        <option value="all">All Availability</option>
+        <option value="available">Available</option>
+        <option value="busy">Busy</option>
+      </select>
+      <button class="filter-btn" onclick="renderUsers()">⚱ Filter</button>
+    </section>
+
+    <div class="result-bar">
+      <span id="resultCount">Showing 5 of 5 users</span>
+      <span>Page 1 of 1</span>
+    </div>
+
+    <section id="userGrid" class="user-grid"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
